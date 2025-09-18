@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generatore testi • Ispirato a Fedez</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Generatore di testi — ispirato a Fedez</h1>
+
+    <div class="notice">
+      <strong>Avviso:</strong> I testi sono <em>originali</em> e creati ispirandosi a caratteristiche generali dello stile. Non imitano in modo preciso la voce o testi esistenti dell'artista.
+    </div>
+
+    <form id="genForm">
+      <label>Argomento
+        <input name="topic" type="text" placeholder="es. amore, politica, social, Milano" />
+      </label>
+
+      <label>Mood
+        <select name="mood">
+          <option value="energetic">Energetic / Provocatorio</option>
+          <option value="melancholic">Melancholic / Introspettivo</option>
+          <option value="ironico">Ironico / Satirico</option>
+          <option value="motivazionale">Motivazionale</option>
+        </select>
+      </label>
+
+      <label>Lunghezza
+        <select name="length">
+          <option value="short">Breve (1 strofa + hook)</option>
+          <option value="medium" selected>Media (2 strofe + hook)</option>
+          <option value="long">Lunga (3+ strofe)</option>
+        </select>
+      </label>
+
+      <label>
+        Includi hook (ritornello)?
+        <input name="hook" type="checkbox" checked />
+      </label>
+
+      <label>
+        Linguaggio esplicito consentito?
+        <input name="explicit" type="checkbox" />
+      </label>
+
+      <label>
+        Forza riferimento a personaggio famoso + rima shock
+        <input name="forceShock" type="checkbox" checked />
+      </label>
+
+      <button type="submit" id="generateBtn">Genera testo</button>
+    </form>
+
+    <section id="resultArea">
+      <h2>Testo generato</h2>
+      <pre id="lyrics" class="lyrics">Premi "Genera testo" per incominciare…</pre>
+      <div class="actions">
+        <button id="regenerate">Rigenera</button>
+        <button id="copy">Copia negli appunti</button>
+      </div>
+    </section>
+
+    <footer>
+      Creato per uso personale / dimostrativo • Non imitare direttamente artisti viventi.
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
